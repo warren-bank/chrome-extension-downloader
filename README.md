@@ -35,13 +35,13 @@ To download the CRX: "uBlock Origin"
   * cjpalhdlnbpafiamejdnhcphjbkeiagm
 * command to save extension using default output path:
   * `crxdl "cjpalhdlnbpafiamejdnhcphjbkeiagm"`
-    * saved to => `./cjpalhdlnbpafiamejdnhcphjbkeiagm.crx`
+    * saved to &rArr; `./cjpalhdlnbpafiamejdnhcphjbkeiagm.crx`
 * command to save extension to a non-default filename in the working directory:
   * `crxdl "cjpalhdlnbpafiamejdnhcphjbkeiagm" "uBlock.crx"`
-    * saved to => `./uBlock.crx`
+    * saved to &rArr; `./uBlock.crx`
 * command to save extension to a non-default filepath:
   * `crxdl "cjpalhdlnbpafiamejdnhcphjbkeiagm" "/save/to/path/uBlock.crx"`
-    * saved to => `/save/to/path/uBlock.crx`
+    * saved to &rArr; `/save/to/path/uBlock.crx`
 
 #### Credits:
 
