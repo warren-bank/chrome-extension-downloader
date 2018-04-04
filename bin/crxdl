@@ -9,4 +9,7 @@ fi
 
 crx_download_url="https://clients2.google.com/service/update2/crx?response=redirect&prodversion=38.0&x=id%3D${chrome_extension_id}%26installsource%3Dondemand%26uc"
 
-wget --no-check-certificate --no-iri -O "$output_filepath" "$crx_download_url"
+wget --no-check-certificate --no-iri \
+  --referer="https://chrome.google.com/webstore/detail/${chrome_extension_id}?hl=en" \
+  --user-agent="Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.106 Safari/537.36" \
+  -O "$output_filepath" "$crx_download_url"
