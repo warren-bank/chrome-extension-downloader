@@ -43,6 +43,15 @@ To download the CRX: "uBlock Origin"
   * `crxdl "cjpalhdlnbpafiamejdnhcphjbkeiagm" "/save/to/path/uBlock.crx"`
     * saved to &rArr; `/save/to/path/uBlock.crx`
 
+#### How to (offline) install a saved CRX:
+
+* open the _Extensions_ page
+  * click: the _Settings_ "hamburger" icon
+  * select: "More tools" > "Extensions"
+* drag &amp; drop the saved .crx file onto the _Extensions_ page
+* follow the prompts
+  * click: "Add extension"
+
 #### Credits:
 
 * [chrome-ext-downloader](https://github.com/jiripospisil/chrome-ext-downloader) provided the URL format used to obtain the CRX from Google
