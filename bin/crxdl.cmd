@@ -42,7 +42,10 @@ if not defined product_version set product_version=%default_product_version%
 
 if not defined platform_os     set platform_os=win
 if not defined platform_arch (
-  if "%PROCESSOR_ARCHITECTURE%"=="AMD64" (set platform_arch=x86-64) else (set platform_arch=x86-32)
+  rem :: https://msdn.microsoft.com/en-us/library/aa384274.aspx#environment_variables
+  if "%PROCESSOR_ARCHITECTURE%"=="ARM64" set platform_arch=arm
+  if "%PROCESSOR_ARCHITECTURE%"=="AMD64" set platform_arch=x86-64
+  if "%PROCESSOR_ARCHITECTURE%"=="x86"   set platform_arch=x86-32
 )
 
 set crx_download_url="https://clients2.google.com/service/update2/crx?response=redirect
