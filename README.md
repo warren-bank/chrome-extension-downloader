@@ -54,7 +54,12 @@ To download the CRX: "uBlock Origin"
 
 #### Credits:
 
-* [chrome-ext-downloader](https://github.com/jiripospisil/chrome-ext-downloader) provided the URL format used to obtain the CRX from Google
+* [Rob Wu](https://github.com/Rob--W)
+  * [StackOverflow answer](https://stackoverflow.com/a/14099762)
+    * explains how to directly download CRX from Google
+  * [crxviewer](https://github.com/Rob--W/crxviewer/blob/master/src/cws_pattern.js)
+* [Jiri Pospisil](https://github.com/jiripospisil)
+  * [chrome-ext-downloader](https://github.com/jiripospisil/chrome-ext-downloader/blob/master/bin/ced)
 
 #### Legal:
 
