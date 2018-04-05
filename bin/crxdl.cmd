@@ -17,11 +17,28 @@ rem :: valid values of "prodchannel" = ['unknown']
 rem ::                                   => Channel is "unknown" on Chromium on ArchLinux, so using "unknown" will probably be fine for everyone.
 rem :: valid values of "prodversion" >= '31.0.1609.0'
 rem ::                                   => older versions receive a 204 response
-set platform_os=
-set platform_arch=
-set product_id=chromecrx
-set product_channel=unknown
-set product_version=61.0.3163.100
+set default_platform_os=
+set default_platform_arch=
+set default_product_id=chromecrx
+set default_product_channel=unknown
+set default_product_version=61.0.3163.100
+
+set platform_os=%~3
+set platform_arch=%~4
+set product_id=%~5
+set product_channel=%~6
+set product_version=%~7
+
+if not defined platform_os     set platform_os=%default_platform_os%
+if not defined platform_arch   set platform_arch=%default_platform_arch%
+if not defined product_id      set product_id=%default_product_id%
+if not defined product_channel set product_channel=%default_product_channel%
+if not defined product_version set product_version=%default_product_version%
+
+if not defined platform_os     set platform_os=win
+if not defined platform_arch (
+  if "%PROCESSOR_ARCHITECTURE%"=="AMD64" (set platform_arch=x86-64) else (set platform_arch=x86-32)
+)
 
 set crx_download_url="https://clients2.google.com/service/update2/crx?response=redirect
 set crx_download_url=%crx_download_url%&os=!platform_os!

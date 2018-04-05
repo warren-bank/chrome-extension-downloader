@@ -3,6 +3,11 @@
 chrome_extension_id="$1"
 output_filepath="$2"
 
+if [ -z "$chrome_extension_id" ]; then
+  echo 'error: ID of CRX is required'
+  exit 1
+fi
+
 if [ -z "$output_filepath" ]; then
   output_filepath=$(pwd)"/${chrome_extension_id}.crx"
 fi
@@ -16,11 +21,31 @@ fi
 #                                   => Channel is "unknown" on Chromium on ArchLinux, so using "unknown" will probably be fine for everyone.
 # valid values of "prodversion" >= '31.0.1609.0'
 #                                   => older versions receive a 204 response
-platform_os=''
-platform_arch=''
-product_id='chromecrx'
-product_channel='unknown'
-product_version='61.0.3163.100'
+default_platform_os=''
+default_platform_arch=''
+default_product_id='chromecrx'
+default_product_channel='unknown'
+default_product_version='61.0.3163.100'
+
+platform_os=${3:-$default_platform_os}
+platform_arch=${4:-$default_platform_arch}
+product_id=${5:-$default_product_id}
+product_channel=${6:-$default_product_channel}
+product_version=${7:-$default_product_version}
+
+[ ! -z "$platform_os" ] || case "$OSTYPE" in
+  *darwin*)        platform_os='mac';;
+  *msys*|*cygwin*) platform_os='win';;
+  *openbsd*)       platform_os='openbsd';;
+  *linux*|*hurd*|*sua*|*interix*|*bsd*|*sunos*|*solaris*|*indiana*|*illumos*|*smartos*) platform_os='Linux';;
+esac
+
+ARCH=$(uname -m)
+[ ! -z "$platform_arch" ] || case "$ARCH" in
+  *arm*)    platform_arch='arm';;
+  'x86_64') platform_arch='x86-64';;
+  'x86_32') platform_arch='x86-32';;
+esac
 
 crx_download_url='https://clients2.google.com/service/update2/crx?response=redirect'
 crx_download_url="${crx_download_url}&os=${platform_os}"
