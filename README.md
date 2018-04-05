@@ -58,6 +58,7 @@ To download the CRX: "uBlock Origin"
   * [StackOverflow answer](https://stackoverflow.com/a/14099762)
     * explains how to directly download CRX from Google
   * [crxviewer](https://github.com/Rob--W/crxviewer/blob/master/src/cws_pattern.js)
+    * [commit](https://github.com/Rob--W/crxviewer/commit/49a84243c9dadfd0401955a4c839bcc13ad53ce9) that adds platform-specific querystring parameters
 * [Jiri Pospisil](https://github.com/jiripospisil)
   * [chrome-ext-downloader](https://github.com/jiripospisil/chrome-ext-downloader/blob/master/bin/ced)
 
