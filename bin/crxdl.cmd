@@ -4,6 +4,11 @@ setlocal enabledelayedexpansion
 set chrome_extension_id=%~1
 set output_filepath=%~2
 
+if not defined chrome_extension_id (
+  echo error: ID of CRX is required
+  exit /B 1
+)
+
 if not defined output_filepath (
   set output_filepath=%cd%\%chrome_extension_id%.crx
 )
