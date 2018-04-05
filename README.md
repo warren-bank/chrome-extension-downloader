@@ -46,10 +46,13 @@ To download the CRX: "uBlock Origin"
 #### How to (offline) install a saved CRX:
 
 * open the _Extensions_ page
-  * click: the _Settings_ "hamburger" icon
-  * select: "More tools" > "Extensions"
+  * from the address bar:
+    * open: [chrome://extensions/](chrome://extensions/)
+  * from the navigation menu:
+    * click: the _Settings_ "hamburger" icon
+    * select: "More tools" > "Extensions"
 * drag &amp; drop the saved .crx file onto the _Extensions_ page
-* follow the prompts
+* follow the prompts:
   * click: "Add extension"
 
 #### Credits:
