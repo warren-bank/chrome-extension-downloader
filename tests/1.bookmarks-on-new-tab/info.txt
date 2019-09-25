@@ -1,0 +1,15 @@
+--------------------------------------------------------------------------------
+
+https://chrome.google.com/webstore/detail/ultra-light-newtab-page-w/jmggnmiangppjceogakhdmafabilpmof
+
+--------------------------------------------------------------------------------
+
+https://github.com/michurin/chrome-extension-bookmarks-on-new-tab
+https://github.com/michurin/chrome-extension-bookmarks-on-new-tab/commits/master
+
+https://github.com/michurin/chrome-extension-bookmarks-on-new-tab/tree/0109e6b4750a5e79f61f333d7f4a6c9503086f3c
+https://github.com/michurin/chrome-extension-bookmarks-on-new-tab/archive/0109e6b4750a5e79f61f333d7f4a6c9503086f3c.zip
+  date    = 04/12/2019
+  message = Bump version 0.5.1.0
+
+--------------------------------------------------------------------------------
