@@ -23,13 +23,15 @@ fi
 #                                   => older versions receive a 204 response
 # valid values of "acceptformat" = ['crx2','crx3','crx2,crx3']
 #                                   => Chrome version history:
-#                                      - 64.0.3282 generates packages in (new) CRX3 format
-#                                      - 73.0.3683 removes support to import packages in (old) CRX2 format
+#                                      - 64.0.3282      generates packages in (new) CRX3 format
+#                                      - 73.0.3683      removes support to import packages in (old) CRX2 format
+#                                      - 88.0.4324.104  adds support for Manifest V3
+#                                      - 135.0.7049.104 the most recent stable release
 default_platform_os=''
 default_platform_arch=''
 default_product_id='chromecrx'
 default_product_channel='unknown'
-default_product_version='73.0.3683'
+default_product_version='135.0.7049.104'
 default_acceptformat='crx2,crx3'
 
 platform_os=${3:-$default_platform_os}

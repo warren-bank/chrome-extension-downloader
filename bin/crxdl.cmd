@@ -24,13 +24,15 @@ rem :: valid values of "prodversion" >= '31.0.1609.0'
 rem ::                                   => older versions receive a 204 response
 rem :: valid values of "acceptformat" = ['crx2','crx3','crx2,crx3']
 rem ::                                   => Chrome version history:
-rem ::                                      - 64.0.3282 generates packages in (new) CRX3 format
-rem ::                                      - 73.0.3683 removes support to import packages in (old) CRX2 format
+rem ::                                      - 64.0.3282      generates packages in (new) CRX3 format
+rem ::                                      - 73.0.3683      removes support to import packages in (old) CRX2 format
+rem ::                                      - 88.0.4324.104  adds support for Manifest V3
+rem ::                                      - 135.0.7049.104 the most recent stable release
 set default_platform_os=
 set default_platform_arch=
 set default_product_id=chromecrx
 set default_product_channel=unknown
-set default_product_version=73.0.3683
+set default_product_version=135.0.7049.104
 set default_acceptformat=crx2,crx3
 
 set platform_os=%~3

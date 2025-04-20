@@ -25,6 +25,21 @@ crxdl "ID" ["output-path"]
     * saves file in the working directory
     * filename is: "$ID.crx"
 
+#### Variations:
+
+* configured to download format: CRX2
+  ```bash
+  crx2dl "ID" ["output-path"]
+  ```
+* configured to download format: CRX3 Manifest V2
+  ```bash
+  crx3m2dl "ID" ["output-path"]
+  ```
+* configured to download format: CRX3 Manifest V3
+  ```bash
+  crx3m3dl "ID" ["output-path"]
+  ```
+
 #### Example:
 
 To download the CRX: "uBlock Origin"
